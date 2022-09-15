@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-background{
+    margin: 0 auto;
+}
+
+.first-section{
+    background-color: #009688;
+    height: 100px;
+}
+
+.second-section{
+    background-color: #d6dbd8
+}
+
+.container-app{
+    width: 1200px;
+    height: 90vh;
+    margin: auto;
+    margin-top: -60px;
+    background-color: #f3eeea;
+}
+
+
+.contacts{
+    height: 90vh;
+    background-color: white;
+    width: 500px ;
+}
+
+header{
+    height: 10vh;
+    background-color: #eaeaea;
+    display: flex;
+}
+  
+header img{
+    border-radius: 50%;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+header p{
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+#alert-message{
+    background-color: #8edafc;
+    height: 10vh;
+    display: flex;
+    padding-top: 30px;
+}
+
+
+
+#search-contact{
+    height: 10vh;
+    background-color: pink;
+}
+
+#alert-message p{
+    flex-direction: row;
+}
+
