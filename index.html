@@ -29,11 +29,14 @@
                     <div>
                         <img src="img/avatar_io.jpg" alt="Avatar io">
                     </div>
-
-                    <p>Sofia</p>
+                    <div>
+                        <p>Sofia</p>
+                    </div>
 
                     <div id="header-icons">
-                        <i class="fa-thin fa-ellipsis-stroke-vertical"></i>
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>
 
@@ -42,7 +45,15 @@
                     <p>Ricevi notifiche di nuovi messaggi</p>
                 </div>
 
-                <div id="search-contact"></div>
+                <div id="search-contact">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                <input 
+                type="text"
+                 v-model="newChat" 
+                 placeholder="Cerca o inizia una nuova chat"
+                 />
+                </div>
+                <div id="contact-chat"></div>
             <div>
                     
         </div>
