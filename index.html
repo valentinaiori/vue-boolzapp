@@ -25,6 +25,7 @@
     -->
         <div class="container-app">
             <div class="contacts-panel">
+                
                 <header>
                     <div class="user-info-container">
                         <img src="img/avatar_io.jpg" alt="Sofia">
@@ -53,13 +54,22 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
+
                 <div id="contact-chat">
-                    <div class="contact active">
+                    <div 
+                    v-for="(contact, index) in contacts" 
+                    :class="{ active: index === activeIndex }" 
+                    class="contact"
+                    @click="setActiveContact(index)"
+                    >
                         <div class="avatar-info-container">
-                            <img  class="avatar-icon"  src="img/avatar_1.jpg" alt="Michele">
+                            <img  
+                            class="avatar-icon"  
+                            :src="'img/avatar' + contact.avatar + '.jpg'" 
+                            alt="contact.name">
 
                             <div class="avatar-info">
-                                <h2>Michele</h2>
+                                <h2>{{ contact.name }}</h2>
                                 <p>Ultimo messaggio inviato</p>
                             </div>
                         </div>

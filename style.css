@@ -41,7 +41,6 @@
 }
 
 header{
-    height: 80px;
     background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
@@ -70,7 +69,6 @@ header img{
     background-color: #8edafc;
     display: flex;
     align-items: center;
-    height: 70px;
 }
 
 #notification-icon{
@@ -96,13 +94,12 @@ header img{
     color: #b1b1b1;
 }
 
-
-#alert-message p{
-    flex-direction: row;
+#contact-chat{
+    overflow-y: scroll;
 }
 
-.contact .active{
-    background-color: #e9ebeb;
+.active{
+    background-color: lightgray;
 }
 
 .avatar-info-container{
