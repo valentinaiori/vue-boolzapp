@@ -19,23 +19,33 @@
 
 .container-app{
     width: 1200px;
-    height: 90vh;
-    margin: auto;
-    margin-top: -60px;
+    height: calc(100vh - 100px);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
     background-color: #f3eeea;
 }
 
 
-.contacts{
-    height: 90vh;
+.contacts-panel{
     background-color: white;
-    width: 500px ;
+    width: 35% ;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 300px;
+
 }
 
 header{
-    height: 10vh;
+    height: 80px;
     background-color: #eaeaea;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
   
 header img{
@@ -45,39 +55,85 @@ header img{
     margin-left: 10px;
 }
 
-header p{
+.user-info-container{
+    display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    align-items: center;
 }
 
 #header-icons{
-margin-left: 200px;
-margin-top: 30px;
+    font-size: 1.2rem;
+    color: #b1b1b1;
 }
 
 #alert-message{
     background-color: #8edafc;
-    height: 10vh;
     display: flex;
-    padding-top: 30px;
-    padding-left: 20px;
+    align-items: center;
+    height: 70px;
 }
 
+#notification-icon{
+    border-radius: 50%;
+    background-color: white;
+    color: #8edafc;
+    width: 55px;
+    height: 50px;
+    object-fit: cover;
+    margin: 5px 25px 5px 25px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2rem;
+}
 
 
 #search-contact{
-    height: 10vh;
-    background-color: pink;
-    padding-top: 30px;
+    background-color: #fafafa;
+    padding: 5px 20px;
 }
 
 #search-contact i{
-    padding-left: 20px;
-    padding-right: 30px;
-
+    color: #b1b1b1;
 }
+
 
 #alert-message p{
     flex-direction: row;
 }
 
+.contact .active{
+    background-color: #e9ebeb;
+}
+
+.avatar-info-container{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    padding: 5px;
+    
+}
+
+.avatar-icon{
+    border-radius: 50%;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.avatar-info{
+    margin-left: 20px;
+}
+
+.avatar-info h2{
+    font-size: 1rem;
+}
+
+.avatar-info-p{
+    font-size: 0.8rem;
+    color: #b1b1b1;
+}
+
+
+.right-panel{
+    flex-grow: 1;
+}

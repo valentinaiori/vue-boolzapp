@@ -3,7 +3,6 @@ console.log('JS OK!')
 const app = new Vue({
     el: '#app',
     data: {
-        newChat:'',
         contacts: [
         {
                 name: 'Michele',
@@ -130,6 +129,11 @@ const app = new Vue({
     
     ]
                 
+  },
+    methods: {
+    setActiveContact(index){
+        this.activeIndex = index;
+    }
   }
 
 })

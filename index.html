@@ -8,31 +8,30 @@
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js" 
-    integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js"
+        integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Boolzapp</title>
 </head>
 <body>
     <div id="app">
+        <!---
         <div class="container-background">
 
             <div class="first-section"></div>
             <div class="second-section"></div>
             
         </div>
-
+    -->
         <div class="container-app">
-            <div class="contacts">
+            <div class="contacts-panel">
                 <header>
-                    <div>
-                        <img src="img/avatar_io.jpg" alt="Avatar io">
+                    <div class="user-info-container">
+                        <img src="img/avatar_io.jpg" alt="Sofia">
+                         <p>Sofia</p>
                     </div>
-                    <div>
-                        <p>Sofia</p>
-                    </div>
-
+                    
+                  
                     <div id="header-icons">
                         <i class="fa-solid fa-circle-notch"></i>
                         <i class="fa-solid fa-message"></i>
@@ -41,34 +40,39 @@
                 </header>
 
                 <div id="alert-message">
-                    <i class="fa-solid fa-bell-slash"></i>
-                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <div id="notification-icon">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div id="notification-text">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="a" target="_blank">Attiva notifiche desktop</a>
+                    </div>
                 </div>
 
                 <div id="search-contact">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                <input 
-                type="text"
-                 v-model="newChat" 
-                 placeholder="Cerca o inizia una nuova chat"
-                 />
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
-                <div id="contact-chat"></div>
-            <div>
-                    
+                <div id="contact-chat">
+                    <div class="contact active">
+                        <div class="avatar-info-container">
+                            <img  class="avatar-icon"  src="img/avatar_1.jpg" alt="Michele">
+
+                            <div class="avatar-info">
+                                <h2>Michele</h2>
+                                <p>Ultimo messaggio inviato</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div>   
         </div>
-
-            
-
-
-
-
-    
-    
-        
-
     </div>
 
+
+    <div class="right-panel">
+
+    </div>
        
         
 
@@ -88,7 +92,7 @@
 
 
 
+   
     <script src="script.js"></script>
-    
 </body>
 </html>
