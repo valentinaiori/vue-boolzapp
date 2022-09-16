@@ -54,6 +54,10 @@ header img{
     margin-left: 10px;
 }
 
+.fa-circle-notch, .fa-message, .fa-ellipsis-vertical{
+    padding-right: 10px;
+}
+
 .user-info-container{
     display: flex;
     flex-direction: row;
@@ -99,7 +103,7 @@ header img{
 }
 
 .active{
-    background-color: lightgray;
+    background-color: #e9ebeb;
 }
 
 .avatar-info-container{
@@ -133,4 +137,36 @@ header img{
 
 .right-panel{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.contact-user{
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #d6d6d6;
+
+}
+
+.contact-user img{
+    border-radius: 50%;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.fa-search, .fa-paperclip,.fa-ellipsis-vertical{
+    padding-right: 10px;
+}
+
+.chat-container{
+    flex-grow: 1;
+    background-image: url('../img/mine.jpg');
+}
+
+.new-message-container{
+    height: 70px;
+    background-color: #f3eeea;
 }
