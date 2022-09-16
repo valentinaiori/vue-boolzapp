@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+/* CONTENT */
+
+/* contacts panel */
+
 .container-background{
     margin: 0 auto;
 }
@@ -50,8 +54,9 @@ header{
 header img{
     border-radius: 50%;
     height: 60px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 .fa-circle-notch, .fa-message, .fa-ellipsis-vertical{
@@ -79,8 +84,8 @@ header img{
     border-radius: 50%;
     background-color: white;
     color: #8edafc;
-    width: 55px;
-    height: 50px;
+    width: 60px;
+    height: 57px;
     object-fit: cover;
     margin: 5px 25px 5px 25px;
     text-align: center;
@@ -100,6 +105,7 @@ header img{
 
 #contact-chat{
     overflow-y: scroll;
+    flex-grow: 1;
 }
 
 .active{
@@ -117,8 +123,9 @@ header img{
 .avatar-icon{
     border-radius: 50%;
     height: 60px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 .avatar-info{
@@ -134,6 +141,8 @@ header img{
     color: #b1b1b1;
 }
 
+
+/* right panel */
 
 .right-panel{
     flex-grow: 1;
@@ -163,10 +172,59 @@ header img{
 
 .chat-container{
     flex-grow: 1;
-    background-image: url('../img/mine.jpg');
+    background-image: url(img/mine.jpg);
+    display: flex;
+    flex-direction: column;
+}
+
+.sent{
+    background-color: #d5f9ba;
+    margin-top: 20px;
+    display: flex;
+    padding: 12px;
+    max-width: 30%;
+    border-radius: 10px;
+}
+
+.received{
+    
+    background-color: white;
+    margin-top: 20px;
+    max-width: 30%;
+    border-radius: 10px;
+    margin-left: 30px;
+    padding: 12px;
 }
 
 .new-message-container{
     height: 70px;
     background-color: #f3eeea;
+    display: flex;
+    justify-content: space-around;
 }
+
+.new-message-container i{
+    font-size: 1.2rem;
+    color: #b1b1b1;
+    margin-top: 24px
+
+}
+
+.text-new-message{
+    width: 600px;
+    border-radius: 10px;
+    height: 49px;
+    margin-top: 10px;
+    border: white;
+    padding-left: 10px;
+}
+
+.fa-face-smile{
+    padding-left: 13px;
+}
+
+.fa-microphone{
+    padding-right: 13px;
+}
+
+

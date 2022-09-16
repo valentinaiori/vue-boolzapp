@@ -15,14 +15,6 @@
 </head>
 <body>
     <div id="app">
-        <!---
-        <div class="container-background">
-
-            <div class="first-section"></div>
-            <div class="second-section"></div>
-            
-        </div>
-    -->
         <div class="container-app">
             <div class="contacts-panel">
 
@@ -94,8 +86,20 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
         </div>
-        <div class="chat-container"></div>
-        <div class="new-message-container"></div>
+        <div class="chat-container">
+            <div 
+            v-for="message in contacts[activeIndex].messages"
+            :class="message.status">
+            {{message.message}}
+            </div>
+        </div>
+
+
+        <div class="new-message-container">
+            <i class="fa-regular fa-face-smile"></i>
+            <input class="text-new-message" type="text" placeholder="Scrivi un messaggio">
+            <i class="fa-solid fa-microphone"></i>
+        </div>
             
 
 
