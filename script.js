@@ -149,7 +149,7 @@ const app = new Vue({
         console.log(this.newMessage);
         const selectedContact = this.contacts[this.activeIndex];
         selectedContact.messages.push({
-            date: this.getNow,
+            date: this.getNow(),
             message: this.newMessage,
             status: "sent",
         });
@@ -179,9 +179,6 @@ const app = new Vue({
     formatDatePart(datePart){
         return datePart < 10 ? '0' + datePart : datePart;
     },
-
-    
-
   }
 
 })
