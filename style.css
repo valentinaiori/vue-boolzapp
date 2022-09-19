@@ -80,6 +80,10 @@ header img{
     align-items: center;
 }
 
+a{
+    color: grey;
+}
+
 #notification-icon{
     border-radius: 50%;
     background-color: white;

@@ -89,18 +89,27 @@
         <div class="chat-container">
             <div 
             v-for="message in contacts[activeIndex].messages"
+            class="message"
             :class="message.status">
+
             <p>{{ message.message }}</p>
             <div class="message-time">
-                {{ getHoursMinutes (message.date) }}
-            </div>
+                {{ message.date }}</div>
             </div>
         </div>
 
 
         <div class="new-message-container">
             <i class="fa-regular fa-face-smile"></i>
-            <input class="text-new-message" type="text" placeholder="Scrivi un messaggio">
+
+            <input 
+            class="text-new-message" 
+            type="text" 
+            v-model= "newMessage" 
+            placeholder="Scrivi un messaggio"
+            @keyUp.enter="sendMessage"
+            />
+
             <i class="fa-solid fa-microphone"></i>
         </div>
             

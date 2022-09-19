@@ -4,6 +4,7 @@ const app = new Vue({
     el: '#app',
     data: {
         activeIndex: 0,
+        newMessage: '',
         contacts: [
         {
                 name: 'Michele',
@@ -135,14 +136,51 @@ const app = new Vue({
     setActiveContact(index){
         this.activeIndex = index;
     },
-
+/*
     getHoursMinutes(dateToFormat){
         const array = dateToFormat.split(" ");
         const ora = array[1];
         const arrayOra = ora.split (":");
         const oreMinuti = arrayOra[0] + ":" + arrayOra[1];
         return oreMinuti;
+    },
+    */
+
+    sendMessage(){
+        console.log(this.newMessage);
+        const selectedContact = this.contacts[this.activeIndex];
+        selectedContact.messages.push({
+            date: this.getNow,
+            message: this.newMessage,
+            status: "sent",
+        });
+
+        setTimeout(() =>{
+            selectedContact.messages.push({
+                date: this.getNow(),
+                message: 'Ok!',
+                status: "received",
+            })
+         }, 2000)
+    },
+
+    getNow(){
+        const now = new Date();
+        console.log(now.getHours() + ":" + now.getMinutes());
+
+        const hours = this.formatDatePart(now.getHours());
+        const minutes = this.formatDatePart(now.getMinutes());
+        const seconds = this.formatDatePart(now.getSeconds());
+        const day = this.formatDatePart(now.getDay());
+        const month = this.formatDatePart(now.getMonth() +1 );
+        const year = this.formatDatePart(now.getFullYear());
+        return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`
+    },
+
+    formatDatePart(datePart){
+        return datePart < 10 ? '0' + datePart : datePart;
     }
+
   }
 
 })
