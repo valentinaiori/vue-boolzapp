@@ -129,22 +129,21 @@ const app = new Vue({
             ],
         },
     
-    ]
-                
+    ]           
   },
+
     methods: {
     setActiveContact(index){
         this.activeIndex = index;
     },
-/*
-    getHoursMinutes(dateToFormat){
-        const array = dateToFormat.split(" ");
+
+    getHoursMinutes(dateFormat){
+        const array = dateFormat.split(" ");
         const ora = array[1];
-        const arrayOra = ora.split (":");
+        const arrayOra = ora.split(":");
         const oreMinuti = arrayOra[0] + ":" + arrayOra[1];
         return oreMinuti;
     },
-    */
 
     sendMessage(){
         console.log(this.newMessage);
@@ -161,7 +160,7 @@ const app = new Vue({
                 message: 'Ok!',
                 status: "received",
             })
-         }, 2000)
+         }, 1000)
     },
 
     getNow(){
@@ -179,7 +178,9 @@ const app = new Vue({
 
     formatDatePart(datePart){
         return datePart < 10 ? '0' + datePart : datePart;
-    }
+    },
+
+    
 
   }
 

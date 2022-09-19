@@ -8,9 +8,7 @@
 
 /* contacts panel */
 
-.container-background{
-    margin: 0 auto;
-}
+
 
 .first-section{
     background-color: #009688;
@@ -105,6 +103,12 @@ a{
 
 #search-contact i{
     color: #b1b1b1;
+}
+
+.find-chat{
+    width: 190px;
+    text-align: center;
+
 }
 
 #contact-chat{

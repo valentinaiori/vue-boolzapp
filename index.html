@@ -44,7 +44,10 @@
 
                 <div id="search-contact">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input 
+                    class="find-chat"
+                    type="text" 
+                    placeholder="Cerca o inizia una nuova chat">
                 </div>
 
                 <div id="contact-chat">
@@ -94,7 +97,7 @@
 
             <p>{{ message.message }}</p>
             <div class="message-time">
-                {{ message.date }}</div>
+                {{ getHoursMinutes(message.date) }}</div>
             </div>
         </div>
 
