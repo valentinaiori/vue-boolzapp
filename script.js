@@ -5,6 +5,7 @@ const app = new Vue({
     data: {
         activeIndex: 0,
         newMessage: '',
+        newSearchContact: '',
         contacts: [
         {
                 name: 'Michele',
@@ -161,6 +162,10 @@ const app = new Vue({
                 status: "received",
             })
          }, 1000)
+    },
+    searchContact(){
+        console.log(this.newSearchContact);
+
     },
 
     getNow(){

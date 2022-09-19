@@ -46,8 +46,10 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input 
                     class="find-chat"
+                    v-model="newSearchContact"
                     type="text" 
-                    placeholder="Cerca o inizia una nuova chat">
+                    placeholder="Cerca o inizia una nuova chat"
+                    @keyUp.enter="searchContact">
                 </div>
 
                 <div id="contact-chat">

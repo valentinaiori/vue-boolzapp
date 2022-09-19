@@ -9,16 +9,6 @@
 /* contacts panel */
 
 
-
-.first-section{
-    background-color: #009688;
-    height: 100px;
-}
-
-.second-section{
-    background-color: #d6dbd8
-}
-
 .container-app{
     width: 1200px;
     height: calc(100vh - 100px);
