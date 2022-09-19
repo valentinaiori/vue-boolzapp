@@ -163,11 +163,7 @@ const app = new Vue({
             })
          }, 1000)
     },
-    searchContact(){
-        console.log(this.newSearchContact);
-
-    },
-
+    
     getNow(){
         const now = new Date();
         console.log(now.getHours() + ":" + now.getMinutes());
