@@ -171,29 +171,42 @@ header img{
 }
 
 .chat-container{
+
     flex-grow: 1;
     background-image: url(img/mine.jpg);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: scroll;
+}
+
+.message-time{
+    text-align: right;
+    font-size: 0.7rem;
+    color: #b1b1b1;
 }
 
 .sent{
     background-color: #d5f9ba;
     margin-top: 20px;
-    display: flex;
     padding: 12px;
-    max-width: 30%;
+    width: 30%;
     border-radius: 10px;
+    font-size: 0.9rem;
+    align-self: flex-end;
+    margin-right: 30px ;
 }
 
 .received{
     
     background-color: white;
     margin-top: 20px;
-    max-width: 30%;
+    width: 30%;
     border-radius: 10px;
     margin-left: 30px;
     padding: 12px;
+    font-size: 0.9rem;
 }
 
 .new-message-container{
