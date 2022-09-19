@@ -92,7 +92,7 @@
             :class="message.status">
             <p>{{ message.message }}</p>
             <div class="message-time">
-                {{ message.date }}
+                {{ getHoursMinutes (message.date) }}
             </div>
             </div>
         </div>

@@ -134,6 +134,14 @@ const app = new Vue({
     methods: {
     setActiveContact(index){
         this.activeIndex = index;
+    },
+
+    getHoursMinutes(dateToFormat){
+        const array = dateToFormat.split(" ");
+        const ora = array[1];
+        const arrayOra = ora.split (":");
+        const oreMinuti = arrayOra[0] + ":" + arrayOra[1];
+        return oreMinuti;
     }
   }
 
