@@ -49,11 +49,12 @@
                     v-model="newSearchContact"
                     type="text" 
                     placeholder="Cerca o inizia una nuova chat"
-                    @keyUp.enter="searchContact">
+                    @keyUp="searchContact">
                 </div>
 
                 <div id="contact-chat">
                     <div 
+                    v-if="contact.visible"
                     v-for="(contact, index) in contacts" 
                     :class="{ active: index === activeIndex }" 
                     class="contact"

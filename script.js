@@ -163,6 +163,16 @@ const app = new Vue({
             })
          }, 1000)
     },
+
+    searchContact(){
+        console.log(this.newSearchContact);
+        this.contacts.forEach((contact) => {
+            contact.visible = contact.name.toLowerCase().includes(this.newSearchContact.toLowerCase());
+            console.log('visible:', contact.visible);
+
+        });
+
+    },
     
     getNow(){
         const now = new Date();
